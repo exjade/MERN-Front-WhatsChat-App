@@ -5,6 +5,7 @@ import DonutLargeIcon from '@material-ui/icons/DonutLarge';
 import Chat from '@material-ui/icons/Chat';
 import MoreVert from '@material-ui/icons/MoreVert';
 import { SearchOutlined } from '@material-ui/icons';
+import SvgIcon from '@mui/material/SvgIcon';
 
 
 const Sidebar = () => {

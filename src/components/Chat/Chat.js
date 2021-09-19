@@ -1,8 +1,9 @@
 import React from 'react'
 import './Chat.css'
 import { Avatar, IconButton } from '@material-ui/core'
-import { AttachFile, Message, SearchOutlined } from '@material-ui/icons'
+import { AttachFile, Message, Mic, SearchOutlined } from '@material-ui/icons'
 import MoreVert from '@material-ui/icons/MoreVert'
+import InsertEmoticon from '@material-ui/icons/InsertEmoticon'
 
 const Chat = () => {
     return (
@@ -62,41 +63,10 @@ const Chat = () => {
                     </span>
                 </p>
 
-                <p className="chat__message chat__receiver">
-                    <span className="chat__name"> Hever David
-                    </span>
-                    obviooooooooooooo 😎😎😎😎😎
-                    <span className="chat__timestamp">
-                        {
-                        new Date().toUTCString()
-                        }
-                    </span>
-                </p>
-
                 <p className="chat__message">
                     <span className="chat__name"> Maria del Carmen
                     </span>
                     Felicitaciones Hever...👏
-                    <span className="chat__timestamp">
-                        {
-                        new Date().toUTCString()
-                        }
-                    </span>
-                </p>
-                <p className="chat__message">
-                    <span className="chat__name"> Maria del Carmen
-                    </span>
-                    A celebrar la ocasión lo amerita
-                    <span className="chat__timestamp">
-                        {
-                        new Date().toUTCString()
-                        }
-                    </span>
-                </p>
-                <p className="chat__message">
-                    <span className="chat__name"> Maria del Carmen
-                    </span>
-                    😝
                     <span className="chat__timestamp">
                         {
                         new Date().toUTCString()
@@ -113,8 +83,18 @@ const Chat = () => {
                         new Date().toUTCString()
                         }
                     </span>
-                </p>
-                        
+                </p>     
+            </div>
+            <div className="chat__footer">
+                <InsertEmoticon />
+                <form> 
+                    <input 
+                    placeholder="Type a message"
+                    type="text" 
+                    />
+                <button type="submit"> Send a message</button>
+                </form>
+                <Mic />
             </div>
         </div>
     )

@@ -1,18 +1,17 @@
 import React from 'react'
 import "./Sidebar.css"
+import SidebarChat from './SidebarChat';
 import { Avatar, IconButton } from '@material-ui/core';
-import DonutLargeIcon from '@material-ui/icons/DonutLarge';
 import Chat from '@material-ui/icons/Chat';
+import DonutLargeIcon from '@material-ui/icons/DonutLarge';
 import MoreVert from '@material-ui/icons/MoreVert';
 import { SearchOutlined } from '@material-ui/icons';
-import SvgIcon from '@mui/material/SvgIcon';
-
 
 const Sidebar = () => {
     return (
         <div className="sidebar">
             <div className="sidebar_header">
-                <Avatar src='https://www.pikpng.com/pngl/m/16-168770_user-iconset-no-profile-picture-icon-circle-clipart.png' />
+                <Avatar src='' />
                 <div className="sidebar_headerRight">
                     <IconButton>
                         <DonutLargeIcon />
@@ -32,7 +31,12 @@ const Sidebar = () => {
                     <input placeholder="Search or start new chat" type="text"/>
                 </div>
             </div>
-
+            <div className="siderbar_chats">
+                <SidebarChat />
+                <SidebarChat />
+                <SidebarChat />
+                <SidebarChat />
+            </div>
         </div>
     )
 }

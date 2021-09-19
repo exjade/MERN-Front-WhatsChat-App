@@ -7,11 +7,11 @@ import DonutLargeIcon from '@material-ui/icons/DonutLarge';
 import MoreVert from '@material-ui/icons/MoreVert';
 import { SearchOutlined } from '@material-ui/icons';
 
-const Sidebar = () => {
+const Sidebar = ( { messages } ) => {
     return (
         <div className="sidebar">
             <div className="sidebar_header">
-                <Avatar src='' />
+                <Avatar />
                 <div className="sidebar_headerRight">
                     <IconButton>
                         <DonutLargeIcon />
@@ -33,9 +33,9 @@ const Sidebar = () => {
             </div>
             <div className="siderbar_chats">
                 <SidebarChat />
+                {/* <SidebarChat />
                 <SidebarChat />
-                <SidebarChat />
-                <SidebarChat />
+                <SidebarChat /> */}
             </div>
         </div>
     )

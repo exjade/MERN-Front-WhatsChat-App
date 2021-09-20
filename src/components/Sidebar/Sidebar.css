@@ -3,7 +3,7 @@
     flex-direction: column;
     flex: 0.35;
 }
-@media (max-width: 540px) {
+@media (max-width: 676px) {
     .sidebar {
         display:none;
     }

@@ -3,13 +3,13 @@ import './SidebarChat.css'
 import { Avatar } from '@material-ui/core';
 
 
-const SidebarChat = ( ) => {
+const SidebarChat = () => {
     return (
         <div className="sidebarChat">
-            <Avatar/>
+            <Avatar />
             <div className="sidebarChat_info">
-                <h2>Chat room</h2>
-                <p>Last message</p>
+                <h2>Chat Room</h2>
+                <p>Last message...</p>
             </div>
         </div>
     )

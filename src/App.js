@@ -8,13 +8,26 @@ import axios from './axios'
 
 function App() {
 
-  const [ messages, setMessages] = useState([])
+  const [ messages, setMessages] = useState([]);
+  const [date, setDate] = useState("");
 
   useEffect(() => {
     axios.get('/messages/sync')
       .then(response => {
         setMessages(response.data)
       })
+  }, [])
+
+  useEffect( () => {
+      let hour = new Date().getHours();
+      let min = new Date().getMinutes();
+      let ampm = hour >= 12 ? 'pm' : 'am';
+      hour =  hour % 12;
+      hour = hour ? hour : 12;
+      min = min < 10 ? '0'+min : min;
+      setDate(
+          `${hour}:${min} ${ampm}`
+      )
   }, [])
 
   useEffect(() => {
@@ -37,14 +50,14 @@ function App() {
 
   }, [messages])
 
-  console.log(messages)
+  // console.log(messages)
 
 
   return (
     <div className="app">
       <div className="app_body">
-        <Sidebar />
-        <Chat messages={messages} />
+        <Sidebar/>
+        <Chat messages={messages} date={date}/>
       </div>
     </div>
   );

@@ -16,3 +16,6 @@
 .sidebarChat_info {
     margin-left:15px
 }
+.sidebarChat > .MuiAvatar-root {
+    display:flex;
+}

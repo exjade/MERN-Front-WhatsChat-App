@@ -1,14 +1,15 @@
-/* .chat__footer {
+.chat__footer {
     display:flex;
     justify-content: space-between;
     align-items: center;
     height: 62px;
     border-top: 1px solid lightgray;
-} */
+}
 
 .chat__footer > form { 
     flex:1;
     display:flex;
+    overflow: none;
 }
 .chat__footer > form > input{
     flex:1;
@@ -20,13 +21,95 @@
     -o-border-radius: 30px;
     padding:10px;
     border:none;
+    text-align: center;
+    width:100%;
+    text-overflow: ellipsis;
+    margin-left: 10px;
+    
 }
 .chat__footer > form > button { 
-    display:none
+    display:none;
+
 }
-.chat__footer > .MuiSvgIcon-root { 
+
+
+/* EMOJI ICON */
+.chat__footer > .iconemoji  { 
     padding:10px;
     color:gray;
-    border:3px solid red;
+    outline:none;
+    position: absolute;
+    margin-left: 10px;
 }
+
+@media (max-width: 304px) {
+    .chat__footer .iconemoji {
+        display:none;
+    }
+}
+
+.chat__footer > .iconemoji:active {
+    color:#adacac;
+}
+
+/* CAMERA ICON */
+.chat__footer > .iconcamera { 
+    padding:10px;
+    color:gray;
+    outline:none;
+    position: relative;
+    left: -50px;
+}
+
+@media (max-width: 304px) {
+    .chat__footer .iconcamera {
+        display:none;
+    }
+}
+.chat__footer > .iconcamera:active { 
+    color:#adacac;
+}
+
+/* MIC ICON */
+.chat__footer > .iconmic {
+    right: 10px;
+    padding: 10px;
+    color: white;
+    outline: none;
+    position: relative;
+    background-color: rgb(54, 190, 149, 0.9);
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+}
+@media (max-width: 676px) {
+    .chat__footer > .iconmic { 
+        /* right: 25px; */
+        padding:10px;
+        color:white;
+        outline:none;
+        /* position: fixed; */
+    }
+    .chat__footer > .iconmic:active { 
+        color:white;
+        content: "";
+        padding: 25px;
+        border-radius: 37em;
+        overflow: visible;
+        position: absolute;
+        right: 0;
+    }
+}
+.chat__footer > .iconmic:active {
+        color:white;
+        content: "";
+        padding: 25px;
+        border-radius: 30em;
+        overflow: visible;
+        position: relative;
+}
+
+
 

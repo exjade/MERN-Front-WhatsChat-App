@@ -2,6 +2,26 @@
     display:flex;
     flex-direction: column;
     flex: 0.65;
+    width:30px; /* Center */
+}
+@media (max-width: 540px) {
+    .chat {
+        display:flex;
+        flex-direction: column;
+        flex: 0.65;
+        width:100%; /* Center */
+        overflow:scroll;
+    }
+}
+
+.chat__body {
+    flex:1;
+    background-image: url("https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png");
+    background-repeat: repeat;
+    background-position: center;
+    padding:30px;
+    overflow:scroll;
+    overflow-x: hidden;
 }
 
 .chat_header {
@@ -24,3 +44,13 @@
     color:gray;
 }
 
+/* START Chat Footer Message */
+.chat__footer {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 62px;
+    border-top: 1px solid lightgray;
+}
+
+/* END Chat Footer Message */

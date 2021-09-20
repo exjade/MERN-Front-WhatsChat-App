@@ -3,6 +3,11 @@
     flex-direction: column;
     flex: 0.35;
 }
+@media (max-width: 540px) {
+    .sidebar {
+        display:none;
+    }
+}
 
 .sidebar_header {
     display: flex;

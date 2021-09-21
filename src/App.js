@@ -65,9 +65,9 @@ function App() {
         <div className="app">
           <div className="app_body">
             <Sidebar />
-            {/* <Route exact path="/mobile">
+            <Route exact path="/mobile">
             <SidebarHome />
-            </Route> */}
+            </Route>
             <Route exact path="/">
               <ChatHome />
             </Route>

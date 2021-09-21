@@ -3,7 +3,7 @@
     .sidebar_home {
         display:flex;
         flex-direction: column;
-        flex: 0.35;
+        flex: 0.47;
     }
     .sidebar_header {
         display: flex;

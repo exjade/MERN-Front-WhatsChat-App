@@ -1,5 +1,5 @@
 import React from 'react'
-import './SidebarChat.css'
+import './SidebarHomeChat.css'
 import { Avatar } from '@material-ui/core';
 import {useHistory} from 'react-router-dom'
 

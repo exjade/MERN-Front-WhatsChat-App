@@ -3,6 +3,7 @@
     flex-direction: column;
     flex: 0.65;
     width:30px; /* Center */
+    overflow: hidden;
 }
 @media (max-width: 676px) {
     .chat {
@@ -33,6 +34,13 @@
     align-items: center;
     border-bottom: 1px  solid lightgray;
 }
+@media (max-width: 200px) {
+    .chat_header {
+        padding: 2px;
+        display: flex;
+        border-bottom: 1px  solid lightgray;
+    }
+}
 @media (max-width: 676px) {
     .chat_header {
         padding: 5px;
@@ -42,8 +50,13 @@
     }
 }
 
-.arrow {
-    display: none;
+
+.arror {
+    color: gray;
+}
+
+.arrow:active {
+    color: gray;
 }
 
 @media (max-width: 676px) {

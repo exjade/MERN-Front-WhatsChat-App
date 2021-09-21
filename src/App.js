@@ -2,14 +2,21 @@ import React, { useEffect, useState } from 'react';
 import './App.css';
 import Sidebar from './components/Sidebar/Sidebar.js'
 import Chat from './components/Chat/Chat.js'
+import ChatHome from './components/Home/ChatHome.js'
+import SidebarHome from './components/Home/SidebarHome/SidebarHome.js'
 import Pusher from 'pusher-js'
 import axios from './axios'
+import {
+  BrowserRouter,
+  Route
+} from 'react-router-dom'
 
 
 function App() {
 
-  const [ messages, setMessages] = useState([]);
+  const [messages, setMessages] = useState([]);
   const [date, setDate] = useState("");
+
 
   useEffect(() => {
     axios.get('/messages/sync')
@@ -18,16 +25,16 @@ function App() {
       })
   }, [])
 
-  useEffect( () => {
-      let hour = new Date().getHours();
-      let min = new Date().getMinutes();
-      let ampm = hour >= 12 ? 'pm' : 'am';
-      hour =  hour % 12;
-      hour = hour ? hour : 12;
-      min = min < 10 ? '0'+min : min;
-      setDate(
-          `${hour}:${min} ${ampm}`
-      )
+  useEffect(() => {
+    let hour = new Date().getHours();
+    let min = new Date().getMinutes();
+    let ampm = hour >= 12 ? 'pm' : 'am';
+    hour = hour % 12;
+    hour = hour ? hour : 12;
+    min = min < 10 ? '0' + min : min;
+    setDate(
+      `${hour}:${min} ${ampm}`
+    )
   }, [])
 
   useEffect(() => {
@@ -54,12 +61,22 @@ function App() {
 
 
   return (
-    <div className="app">
-      <div className="app_body">
-        <Sidebar/>
-        <Chat messages={messages} date={date}/>
-      </div>
-    </div>
+    <BrowserRouter>
+        <div className="app">
+          <div className="app_body">
+            <Sidebar />
+            {/* <Route exact path="/mobile">
+            <SidebarHome />
+            </Route> */}
+            <Route exact path="/">
+              <ChatHome />
+            </Route>
+            <Route exact path="/messages">
+              <Chat messages={messages} date={date} />
+            </Route>
+          </div>
+        </div>
+    </BrowserRouter>
   );
 }
 

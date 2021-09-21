@@ -1,9 +1,31 @@
+
+
 .chat__footer {
     display:flex;
     justify-content: space-between;
     align-items: center;
     height: 62px;
     border-top: 1px solid lightgray;
+}
+@media (max-width: 500px) {
+    .chat_footer{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin: 50px;
+        font-size: 14px;
+    }
+}
+@media (max-width: 320px) {
+    .chat_footer{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin: 30px;
+        font-size: 14px;
+    }
 }
 
 .chat__footer > form { 
@@ -109,6 +131,37 @@
         border-radius: 30em;
         overflow: visible;
         position: relative;
+}
+/* Send  ICON */
+.chat__footer > .send {
+    right: 10px;
+    padding: 10px;
+    color: white;
+    outline: none;
+    position: relative;
+    background-color: rgb(54, 190, 149, 0.9);
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+}
+@media (max-width: 676px) {
+    .chat__footer > .send { 
+        /* right: 25px; */
+        padding:10px;
+        color:white;
+        outline:none;
+        /* position: fixed; */
+    }
+}
+.chat__footer > .send:active {
+    color:white;
+    content: "";
+    padding: 15px;
+    border-radius: 30em;
+    overflow: visible;
+    position: relative;
 }
 
 

@@ -7,7 +7,8 @@ import DonutLargeIcon from '@material-ui/icons/DonutLarge';
 import MoreVert from '@material-ui/icons/MoreVert';
 import { SearchOutlined } from '@material-ui/icons';
 
-const Sidebar = () => {
+const Sidebar = ({ day }) => {
+
     return (
         <div className="sidebar">
             <div className="sidebar_header">
@@ -31,10 +32,12 @@ const Sidebar = () => {
                     <input placeholder="Search or start new chat" type="text" />
                 </div>
             </div>
+
             <div className="siderbar_chats">
-                <SidebarChat />
+                <SidebarChat day={day} />
             </div>
         </div>
+
     )
 }
 

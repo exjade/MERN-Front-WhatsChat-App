@@ -3,9 +3,18 @@
     flex-direction: column;
     flex: 0.28;
 }
+
 @media (max-width: 676px) {
     .sidebar {
-     display:none;
+       
+            display:flex;
+            flex-direction: column;
+            flex: 0.65;
+            width:100%; 
+            overflow:scroll;
+            overflow-x: hidden;   
+            overflow-y: hidden;   
+        
     }
 }
 

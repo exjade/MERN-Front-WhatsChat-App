@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import './Chat.css'
 import { Avatar, IconButton } from '@material-ui/core'
 import { AttachFile, SearchOutlined, ArrowBack } from '@material-ui/icons'
@@ -9,29 +9,8 @@ import { useHistory } from 'react-router-dom'
 
 const Chat = ({ messages, date }) => {
 
-    // const [size, setSize] = useState(window.innerWidth > 676)
-
     let history = useHistory();
 
-    // useEffect(() => {
-    //     window.addEventListener('resize', updateChat)
-    //     return () => window.removeEventListener('resize', updateChat)
-    // }, [])
-
-    // function updateChat() {
-
-    //     setSize({
-    //         isDesktop: window.innerWidth > 676,
-    //     })
-    //     history.push("/mobile")
-    // }
-    // function handleClick2() {
-
-    //     setSize({
-    //         isDesktop: window.innerWidth < 676,
-    //     })
-    //     history.push("/")
-    // }
     function handleClick() {
         history.push("/")
     }

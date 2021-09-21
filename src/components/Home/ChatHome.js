@@ -2,12 +2,17 @@ import React from 'react'
 import './ChatHome.css'
 import connectimg from "./../../assets/connectimg.jpg"
 import { Computer } from '@material-ui/icons'
+import { useHistory } from 'react-router-dom'
 
 
 const Chat = () => {
+    let history = useHistory();
 
+    function handleClick() {
+        history.push("/")
+    }
     return (
-        <div className="chat_home">
+        <div className="chat_home" onClick={handleClick}>
             <div className="chat_imgheader">
                 <img src={connectimg} className="chat__imgchat" alt="logo"/>
                 <h1 className="chat__text">

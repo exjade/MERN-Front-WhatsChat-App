@@ -16,6 +16,7 @@ function App() {
 
   const [messages, setMessages] = useState([]);
   const [date, setDate] = useState("");
+  const [day, setDay] = useState("");
 
 
   useEffect(() => {
@@ -34,6 +35,13 @@ function App() {
     min = min < 10 ? '0' + min : min;
     setDate(
       `${hour}:${min} ${ampm}`
+    )
+  }, [])
+  useEffect(() => {
+    const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    const weekday = new Date();
+    setDay(
+      days[weekday.getDay()]
     )
   }, [])
 
@@ -57,25 +65,25 @@ function App() {
 
   }, [messages])
 
-  // console.log(messages)
-
 
   return (
     <BrowserRouter>
-        <div className="app">
-          <div className="app_body">
-            <Sidebar />
-            <Route exact path="/mobile">
-            <SidebarHome />
+      <div className="app">
+        <div className="app_body">
+          <Route exact path="/">
+            <Sidebar day={day} />
+          </Route>
+          <Route exact path="/messages">
+            <SidebarHome day={day}/>
             </Route>
-            <Route exact path="/">
-              <ChatHome />
-            </Route>
-            <Route exact path="/messages">
-              <Chat messages={messages} date={date} />
-            </Route>
-          </div>
+          <Route exact path="/">
+            <ChatHome />
+          </Route>
+          <Route exact path="/messages">
+            <Chat messages={messages} date={date} />
+          </Route>
         </div>
+      </div>
     </BrowserRouter>
   );
 }

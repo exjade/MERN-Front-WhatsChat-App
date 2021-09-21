@@ -16,7 +16,7 @@ const ChatFooterMessage = () => {
             message: input,
             name: "Usuario",
             timestamp: "Just now!",
-            received: false,
+            received: Boolean,
         });
         setInput('');
     };

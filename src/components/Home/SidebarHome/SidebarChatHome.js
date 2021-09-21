@@ -1,9 +1,9 @@
 import React from 'react'
-import './SidebarHomeChat.css'
+import './SidebarChatHome.css'
 import { Avatar } from '@material-ui/core';
 import {useHistory} from 'react-router-dom'
 
-const SidebarChat = () => {
+const SidebarChatHome = ( { day } ) => {
 
     let history = useHistory();
 
@@ -12,14 +12,17 @@ const SidebarChat = () => {
       }
 
     return (
-        <div className="sidebarChat" onClick={handleClick}>
+        <div className="sidebarchathome" onClick={handleClick}>
             <Avatar />
-            <div className="sidebarChat_info">
+            <div className="sidebarchathome_info">
                 <h2>Chat Room</h2>
                 <p>Last message...</p>
             </div>
+            <div className="sidebarchathome__check">
+                    {day}
+                </div>
         </div>
     )
 }
 
-export default SidebarChat
+export default SidebarChatHome

@@ -1,4 +1,4 @@
-.sidebarChat {
+.sidebarchathome {
     display: flex;
     padding: 15px;
     cursor: pointer;
@@ -8,26 +8,26 @@
     text-overflow: ellipsis;
 }
 
-.sidebarChat > .MuiAvatar-root {
+.sidebarchathome > .MuiAvatar-root {
     display: flex;
     margin-right: 12px;
 }
 
-.sidebarChat:hover {
+.sidebarchathome:hover {
     background-color: #ebebeb;
 }
 
-.sidebarChat_info > h2 {
+.sidebarchathome_info > h2 {
     font-size: smaller;
     margin-bottom: 8px;
 }
-.sidebarChat_info > p {
+.sidebarchathome_info > p {
     font-size: small;
   
 }
-.sidebarChat_info {
+.sidebarchathome_info {
     margin-left:15px
 }
-.sidebarChat > .MuiAvatar-root {
+.sidebarchathome__check > .MuiAvatar-root {
     display:flex;
 }

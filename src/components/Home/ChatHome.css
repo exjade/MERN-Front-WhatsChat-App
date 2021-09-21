@@ -1,13 +1,19 @@
 .chat_home {
     display:flex;
     flex-direction: column;
-    flex: 0.80;
+    flex: 0.72;
     width:30px; /* Center */
     border-bottom: 6px solid #056162;
     overflow: hidden;
+    padding: 80px;
+}
+@media (max-width: 676px) {
+    .chat_home{
+     display:none;
+    }
 }
 
-@media (max-width: 676px) {
+/* @media (max-width: 676px) {
     .chat_home {  
         display:flex;
         flex-direction: column;
@@ -18,7 +24,7 @@
         overflow-y: hidden;
         scroll-behavior: smooth;
     }
-}
+} */
 
 @media (max-width: 676px) {
     .arrow {
